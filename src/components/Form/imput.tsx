@@ -15,6 +15,7 @@ export function Input({ name, label, ...rest }: InputProps) {
                 focusBorderColor='pink.500'
                 bgColor='gray.900'
                 variant="flushed"
+                borderColor="gray.700"
                 _hover={{
                     bgColor: 'gray.900'
                 }}
