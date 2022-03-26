@@ -1,4 +1,4 @@
-import { Box, Button, Checkbox, Flex, Heading, Icon, Table, Tbody, Td, Th, Thead, Tr, Text } from "@chakra-ui/react";
+import { Box, Button, Checkbox, Flex, Heading, Icon, Table, Tbody, Td, Th, Thead, Tr, Text, useBreakpointValue } from "@chakra-ui/react";
 import { RiAddLine, RiPencilLine } from "react-icons/ri";
 
 import { Header } from "../../components/Header";
@@ -6,6 +6,12 @@ import { Pagination } from "../../components/Pagination";
 import { Sidebar } from "../../components/Sidebar";
 
 export default function UserList() {
+
+    const isWideVersion = useBreakpointValue({
+        base: false,
+        lg: true,
+    })
+
     return (
         <Box>
             <Header />
@@ -31,12 +37,12 @@ export default function UserList() {
 
                         <Thead>
                             <Tr>
-                                <Th px="6" color="gray.300" width="8">
+                                <Th px={["4", "4", "6"]} color="gray.300" width="8">
                                     <Checkbox colorScheme="pink" />
                                 </Th>
 
                                 <Th>User</Th>
-                                <Th>Sign in date</Th>
+                                {isWideVersion && <Th>Sign in date</Th>}
                                 <Th width="8"></Th>
                             </Tr>
                         </Thead>
@@ -44,7 +50,7 @@ export default function UserList() {
                         <Tbody>
 
                             <Tr>
-                                <Td px="6">
+                                <Td px={["4", "4", "6"]}>
                                     <Checkbox colorScheme="pink" />
                                 </Td>
 
@@ -54,7 +60,7 @@ export default function UserList() {
                                         <Text fontSize="sm" color="gray.300">bernardomennndes@outlook.com</Text>
                                     </Box>
                                 </Td>
-                                <Td>23 Mar, 2022</Td>
+                                {isWideVersion && <Td>23 Mar, 2022</Td>}
                                 <Td>
                                     <Button
                                         as="a"
@@ -66,13 +72,13 @@ export default function UserList() {
                                         borderColor="gray.600"
                                         borderRadius="0"
                                     >
-                                        Edit
+                                        {isWideVersion && "Edit"}
                                     </Button>
                                 </Td>
                             </Tr>
 
                             <Tr>
-                                <Td px="6">
+                                <Td px={["4", "4", "6"]}>
                                     <Checkbox colorScheme="pink" />
                                 </Td>
 
@@ -82,7 +88,7 @@ export default function UserList() {
                                         <Text fontSize="sm" color="gray.300">bernardomennndes@outlook.com</Text>
                                     </Box>
                                 </Td>
-                                <Td>23 Mar, 2022</Td>
+                                {isWideVersion && <Td>23 Mar, 2022</Td>}
                                 <Td>
                                     <Button
                                         as="a"
@@ -94,13 +100,13 @@ export default function UserList() {
                                         borderColor="gray.600"
                                         borderRadius="0"
                                     >
-                                        Edit
+                                        {isWideVersion && "Edit"}
                                     </Button>
                                 </Td>
                             </Tr>
 
                             <Tr>
-                                <Td px="6">
+                                <Td px={["4", "4", "6"]}>
                                     <Checkbox colorScheme="pink" />
                                 </Td>
 
@@ -110,7 +116,7 @@ export default function UserList() {
                                         <Text fontSize="sm" color="gray.300">bernardomennndes@outlook.com</Text>
                                     </Box>
                                 </Td>
-                                <Td>23 Mar, 2022</Td>
+                                {isWideVersion && <Td>23 Mar, 2022</Td>}
                                 <Td>
                                     <Button
                                         as="a"
@@ -122,7 +128,7 @@ export default function UserList() {
                                         borderColor="gray.600"
                                         borderRadius="0"
                                     >
-                                        Edit
+                                        {isWideVersion && "Edit"}
                                     </Button>
                                 </Td>
                             </Tr>
