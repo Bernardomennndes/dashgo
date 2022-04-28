@@ -101,7 +101,7 @@ export default function UserList() {
 
                             <Pagination
                                 totalCountOfRegisters={data.totalCount}
-                                currentPage={5}
+                                currentPage={page}
                                 onPageChange={setPage}   
                             />
                         </>
